@@ -11,7 +11,26 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Rubik:wght@300;400&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="css/tailwind-styles.css">
+  <!-- <link rel="stylesheet" href="css/tailwind-styles.css"> -->
+
+  <!-- disable cdn and use local tailwind for production-->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- make sure to add these into tailwind.config.js -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            myblack: '#44494B',
+            mygray: '#FBFBFB',
+            myblue: '#4A62FB',
+            myyellow: '#FBDE6B'
+          }
+        }
+      }
+    }
+  </script>
 
 </head>
 
@@ -23,7 +42,7 @@
   </nav>
 
   <header>
-    <h1 class="hero-txt text-2xl text-5xl">taxi that is more like you own it.</h1>
+    <h1 class="hero-txt text-5xl">taxi that is more like you own it.</h1>
     <button class="btn contact-btn">contact</button>
 
     <img src="" alt="car" class="car" />
