@@ -1,0 +1,24 @@
+{
+  "name": "taxi-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "dependencies": {
+    "tailwindcss": "^3.0.23"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build-css": "tailwindcss build -i tailwind/tailwind-styles.css -o public/css/tailwind-styles.css -c ./tailwind/tailwind.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fru2/taxi-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fru2/taxi-landing-page/issues"
+  },
+  "homepage": "https://github.com/fru2/taxi-landing-page#readme"
+}
