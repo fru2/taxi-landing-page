@@ -11,6 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Rubik:wght@300;400&display=swap"
     rel="stylesheet">
 
+  <link rel="stylesheet" href="css/styles.css">
   <!-- <link rel="stylesheet" href="css/tailwind-styles.css"> -->
 
   <!-- disable cdn and use local tailwind for production-->
@@ -27,6 +28,10 @@
             myblue: '#4A62FB',
             myyellow: '#FBDE6B'
           }
+        },
+        fontFamily: {
+          sans: ['Poppins', 'sans-serif'],
+          body: ['Rubik', 'sans-serif']
         }
       }
     }
@@ -34,28 +39,39 @@
 
 </head>
 
-<body>
+<body class="text-myblack py-6 px-16 font-sans box-border">
 
-  <nav>
-    <img src="" alt="branding logo" />
-    <div class="hamburger-menu"></div>
+  <nav class="w-full flex justify-between fixed top-0 left-0 py-6 px-16 bg-white shadow-sm">
+    <img src="./assets/icons/branding.svg" alt="branding logo" class="w-8" />
+
+    <ul class="flex space-x-16 absolute absolute-center">
+      <li class="">Home</li>
+      <li class="">About</li>
+      <li class="">Reviews</li>
+      <li class="">Contact</li>
+    </ul>
+
+    <img src="./assets/icons/menu.svg" alt="hamburder icon" class="w-6" />
   </nav>
 
-  <header>
-    <h1 class="hero-txt text-5xl">taxi that is more like you own it.</h1>
-    <button class="btn contact-btn">contact</button>
 
-    <img src="" alt="car" class="car" />
+
+  <header class="px-10 flex flex-col items-center justify-center box-border">
+    <h1 class="hero-txt text-6xl w-max max-w-lg inline ">taxi that is more<br>like you own it.</h1>
+    <button
+      class=" btn contact-btn w-max border-myblack border-2  bg-myblack text-white px-10 py-3 mt-6 text-lg hover:bg-white hover:text-myblack hover:border-myblack transition">contact</button>
 
     <div class="lights">
       <div class="light-trail"></div>
       <div class="light-trail"></div>
     </div>
 
-    <h3>serioously</h3>
   </header>
 
-  <p>keep scrolling</p>
+  <img src="" alt="car" class="car" />
+  <h3>seriosly</h3>
+
+  <p class="fixed bottom-0 absolute-center my-6">keep scrolling</p>
 
   <section>
     <article>
