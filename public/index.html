@@ -39,9 +39,9 @@
 
 </head>
 
-<body class="text-myblack py-6 px-16 font-sans box-border">
+<body class="text-myblack py-6 px-16 font-sans box-border overflow-x-hidden">
 
-  <nav class="w-full flex justify-between fixed top-0 left-0 py-6 px-16 bg-white shadow-sm">
+  <nav class="w-full flex justify-between fixed top-0 left-0 py-6 px-16 bg-white bg-opacity-5 shadow-sm z-10">
     <img src="./assets/icons/branding.svg" alt="branding logo" class="w-8" />
 
     <ul class="flex space-x-16 absolute absolute-center">
@@ -51,15 +51,22 @@
       <li class="">Contact</li>
     </ul>
 
-    <img src="./assets/icons/menu.svg" alt="hamburder icon" class="w-6" />
+
+    <button class="nav-toggle"><img src="./assets/icons/menu.svg" alt="hamburder icon" class="w-6" /></button>
   </nav>
 
 
 
-  <header class="px-10 flex flex-col items-center justify-center box-border">
-    <h1 class="hero-txt text-6xl w-max max-w-lg inline ">taxi that is more<br>like you own it.</h1>
+  <header class="px-10 -mt-6 h-[100vh] flex flex-col items-center justify-center box-border -z-20">
+    <h1 class="tagline hero-txt text-6xl w-max max-w-lg inline ">taxi that is more<br>like you own it.</h1>
+
+    <h3
+      class="px-10 h-[100vh] flex flex-col items-center justify-center box-border text-6xl fixed top-0 absolute-center opacity-0"
+      id="transition-txt">
+      seriosly</h3>
+
     <button
-      class=" btn contact-btn w-max border-myblack border-2  bg-myblack text-white px-10 py-3 mt-6 text-lg hover:bg-white hover:text-myblack hover:border-myblack transition">contact</button>
+      class="tagline btn contact-btn w-max border-myblack border-2  bg-myblack text-white px-10 py-3 mt-6 text-lg hover:bg-white hover:text-myblack hover:border-myblack transition">contact</button>
 
     <div class="lights">
       <div class="light-trail"></div>
@@ -68,26 +75,40 @@
 
   </header>
 
-  <img src="" alt="car" class="car" />
-  <h3>seriosly</h3>
+
+  <div class="transition-container h-screen w-screen">
+
+  </div>
+
+
+  <div class="h-[100vh] flex flex-col items-center justify-center box-border fixed top-0 -right-2/4 -z-10" id="car-img">
+
+    <div class="absolute top-56 left-60 bg-myblue h-4 w-[200vw] -z-10 shadow-lg shadow-myblue tail-light"></div>
+
+    <img src="./assets/images/car-top.png" alt="car" class="h-[55vh] object-cover " />
+
+    <div class="absolute bottom-52 left-60 bg-myblue h-4 w-[200vw] -z-10 shadow-lg shadow-myblue tail-light"></div>
+  </div>
+
+
 
   <p class="fixed bottom-0 absolute-center my-6">keep scrolling</p>
 
-  <section>
-    <article>
+  <section class="bg-myblue text-white -mx-16 z-10">
+    <article class="px-10 h-[100vh] flex flex-col items-center justify-center box-border">
       <h3>Planning for a long trip? We got you. Hire for as long as you need.</h3>
     </article>
-    <article>
+    <article class="px-10 h-[100vh] flex flex-col items-center justify-center box-border">
       <h3>Rates that fit your budget, it's 30% more cheaper than ola and uber.</h3>
     </article>
-    <article>
+    <article class="px-10 h-[100vh] flex flex-col items-center justify-center box-border">
       <h3>Need SUV, sedan, hatchback? You name it, we will send it.</h3>
     </article>
   </section>
 
-  <section>
-    <img src="" alt="promo-img" />
-    <img src="" alt="promo-img" />
+  <section class="px-10 min-h-[100vh] flex flex-col items-center justify-center box-border ">
+    <img src="./assets/images/promo-img.jpg" alt="promo-img" />
+    <img src="./assets/images/promo-img-2.jpg" alt="promo-img" />
 
     <div class="image-count">
       <div class="dot"></div>
@@ -95,47 +116,117 @@
     </div>
   </section>
 
-  <section>
-    <h3>Revies from out customers:</h3>
+  <section class="px-10 min-h-[100vh] mt-16 flex flex-col justify-center box-border ">
+    <h3 class="text-5xl max-w-xl">Reviews from our customers:</h3>
 
     <!-- Inject reviews here -->
     <!-- this is just a mock review -->
-    <div class="review-container">
-      <p class="name">Indumati</p>
-      <p class="date-time">23-march-2022</p>
-      <p class="review-txt">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea
-      </p>
+    <div class="review-container bg-mygray px-16 py-6 mt-10 space-y-6">
 
-      <div class="rating">
-        <img src="" alt="star icon" class="star star-active">
-        <img src="" alt="star icon" class="star star-active">
-        <img src="" alt="star icon" class="star star-active">
-        <img src="" alt="star icon" class="star star-active">
-        <img src="" alt="star icon" class="star star-inactive">
+      <!-- Card 1 -->
+      <div>
+        <div class="flex row justify-between items-center">
+          <p class="name text-lg font-medium">Indumati</p>
+          <p class="date-time text-[#b1b3b4] mr-4">23-march-2022</p>
+        </div>
+
+        <p class="review-txt mt-3">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+          clita kasd gubergren, no sea
+        </p>
+
+        <div class="rating flex row mt-3">
+          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
+          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
+          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
+          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
+          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-inactive">
+        </div>
+
+        <hr class="mt-6" />
       </div>
 
-      <hr />
+      <!-- Card 2 -->
+      <div>
+        <div class="flex row justify-between items-center">
+          <p class="name text-lg font-medium">Bheem</p>
+          <p class="date-time text-[#b1b3b4] mr-4">23-march-2022</p>
+        </div>
+
+        <p class="review-txt mt-3">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+          clita kasd gubergren, no sea
+        </p>
+
+        <div class="rating flex row mt-3">
+          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
+          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
+          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
+          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
+          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-inactive">
+        </div>
+
+        <hr class="mt-6" />
+      </div>
+
+      <!-- Card 3 -->
+      <div>
+        <div class="flex row justify-between items-center">
+          <p class="name text-lg font-medium">Chutki</p>
+          <p class="date-time text-[#b1b3b4] mr-4">23-march-2022</p>
+        </div>
+
+        <p class="review-txt mt-3">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+          clita kasd gubergren, no sea
+        </p>
+
+        <div class="rating flex row mt-3">
+          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
+          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
+          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
+          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
+          <img src="./assets/icons/star-inactive.svg" alt="star icon" class="star star-inactive">
+        </div>
+
+        <hr class="mt-6" />
+      </div>
+
+      <div class="flex row gap-6 mt-6 mb-3">
+        <button class="btn btn-outline border-2 border-myblack px-6 py-1">VIEW MORE</button>
+        <button
+          class="btn contact-btn w-max border-myblack border-2  bg-myblack text-white px-6 py-1 hover:bg-mygray hover:text-myblack hover:border-myblack transition">
+          WRITE REVIEW
+        </button>
+      </div>
 
     </div>
 
-    <button class="btn btn-outline">VIEW MORE</button>
-    <button class="btn btn-solid">WRITE REVIEW</button>
   </section>
 
 
 
-  <section>
-    <button class="btn btn-solid">WHATSAPP</button>
-    <button class="btn btn-outline">EMAIL</button>
+  <section class="px-10 min-h-[100vh] flex flex-col items-center justify-center box-border ">
+
+    <h3 class="text-5xl font-medium w-max">Contact for more details</h3>
+
+    <div class="flex row gap-6 mt-6">
+      <button
+        class="btn contact-btn w-max border-myblack border-2 bg-myblack text-white px-6 py-2 text-lg hover:bg-mygray hover:text-myblack hover:border-myblack transition min-w-[12vw]">
+        WHATSAPP
+      </button>
+      <button class="btn btn-outline border-2 border-myblack px-6 py-2 text-lg min-w-[12vw]">EMAIL</button>
+    </div>
   </section>
 
 
-  <footer>
+  <footer class="flex row justify-between ">
     <p>© BiharTourAndTravels.com - 2022</p>
-    <p>Designed and developed by <span><a href="https://utsav-anand.com" target="_blank">fru2</a></span></p>
+    <p>Designed and developed by <span><a href="https://utsav-anand.com" target="_blank"
+          class="decoration-2 decoration-blue-500 underline">fru2</a></span></p>
   </footer>
 
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>

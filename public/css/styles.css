@@ -8,6 +8,15 @@
   width: max-content;
 }
 
-header {
+/* header {
   height: 100vh;
+} */
+
+.rating-star {
+  fill: #FBDE6B !important;
+}
+
+
+* {
+  box-sizing: border-box;
 }
