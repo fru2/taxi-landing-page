@@ -7,14 +7,15 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+
 let t1 = gsap.timeline({
   scrollTrigger: {
     trigger: 'header',
     start: 'top top',
-    end: '+=300%',
+    end: '+=1200%',
     pin: 'header',
     scrub: true,
-    markers: true,
   }
 });
 
@@ -36,14 +37,89 @@ t1.to('#car-img', {
     scale: 30,
     duration: 0.8,
   })
+  .to('#scroll', {
+    opacity: 0,
+    duration: 0,
+  })
+  .to('.color-shift', {
+    opacity: 1,
+    color: '#fff'
+  }, 1.2)
+
+  .fromTo('#service-1', {
+    opacity: 0,
+    y: 20,
+  }, {
+    opacity: 1,
+    y: 0
+  })
+  .to('#service-1', {
+    opacity: 0,
+    y: -20,
+  })
+
+  .fromTo('#service-2', {
+    opacity: 0,
+    y: 20,
+  }, {
+    opacity: 1,
+    y: 0
+  })
+  .to('#service-2', {
+    opacity: 0,
+    y: -20,
+  })
+
+  .fromTo('#service-3', {
+    opacity: 0,
+    y: 20,
+  }, {
+    opacity: 1,
+    y: 0
+  })
+  .to('#service-3', {
+    opacity: 0,
+    y: -20,
+  })
 
 
-// let t2 = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: '.transition-container',
-//     start: 'bottom bottom',
-//     end: '+=100%',
-//     pin: 'header',
-//     markers: 'true'
-//   }
+
+let t2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '#images-section',
+    start: 'bottom bottom',
+    end: '+=300%',
+    pin: '#images-section',
+    scrub: true,
+  }
+})
+
+t2
+  .to('#promo-img-1', {
+    left: 0,
+    duration: 0,
+  })
+  .to('.tail-light', {
+    opacity: 0,
+    duration: 0.1,
+  })
+  .to('.color-shift', {
+    color: '#44494B',
+    duration: 0.1
+  })
+  .to('.icon-light', {
+    opacity: 0,
+    duration: 0.1
+  }, 0.1)
+  .to('#images-section', {
+    scale: 0.6,
+  })
+  .to('#promo-img-2', {
+    left: 0
+  })
+
+// timeline2.
+// to('.tail-light', {
+//   opacity: 0,
+//   duration: 0,
 // })

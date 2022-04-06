@@ -14,9 +14,11 @@
 
 .rating-star {
   fill: #FBDE6B !important;
+  box-shadow: #f0f 0 0 0 1px;
 }
 
 
 * {
   box-sizing: border-box;
 }
+
