@@ -33,8 +33,12 @@ t1.to('#car-img', {
   .to('#car-img', {
     x: '-150vw',
   })
+  .to('#services-section', {
+    display: 'block',
+    duration: 0,
+  })
   .to('.tail-light', {
-    scale: 30,
+    scale: 35,
     duration: 0.8,
   })
   .to('#scroll', {
@@ -112,7 +116,7 @@ t2
     duration: 0.1
   }, 0.1)
   .to('#images-section', {
-    scale: 0.6,
+    scale: 0.7,
   })
   .to('#promo-img-2', {
     left: 0
