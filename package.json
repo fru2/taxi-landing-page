@@ -4,9 +4,8 @@
   "description": "",
   "main": "tailwind.config.js",
   "dependencies": {
-    "tailwindcss": "^3.0.23"
   },
-  "devDependencies": {},
+  "devDependencies": {"tailwindcss": "^3.0.23"},
   "scripts": {
     "build-css": "tailwindcss build -i tailwind/tailwind-styles.css -o public/css/tailwind-styles.css -c ./tailwind/tailwind.config.js --watch"
   },
