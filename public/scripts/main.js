@@ -7,21 +7,31 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
+  ScrollTrigger.config({
+    // Disables the resfresh even in viewport resize
+    autoRefreshEvents: "visibilitychange, DOMContentLoaded, load"
+  })
 
-let t1 = gsap.timeline({
-  scrollTrigger: {
-    trigger: 'header',
-    start: 'top top',
-    end: '+=1200%',
-    pin: 'header',
-    scrub: 0,
-  }
-});
+}
+
 
 
 // For desktop and tablet 
 if (window.innerWidth > 768) {
+
+
+  let t1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: 'header',
+      start: 'top top',
+      end: '+=1200%',
+      pin: 'header',
+      scrub: 0,
+    }
+  });
+
   t1
     .to('#car-img', {
       x: '-74vw',
@@ -93,6 +103,19 @@ if (window.innerWidth > 768) {
 
 // For mobile
 else {
+
+
+  let t1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: 'header',
+      start: 'top top',
+      end: '+=700%',
+      pin: 'header',
+      scrub: 0,
+    }
+  });
+
+
   t1
     .to('#car-img', {
       x: '-128vw',
