@@ -50,27 +50,31 @@
         class="icon-light w-8 absolute opacity-0 color-shift" />
     </div>
 
-
-    <ul class="sm:flex hidden space-x-16 absolute absolute-center">
-      <li class="color-shift">About</li>
-      <li class="color-shift">Home</li>
-      <li class="color-shift">Reviews</li>
-      <li class="color-shift">Contact</li>
+    <!-- Navigation don't work as expected -->
+    <ul class="sm:flex hidden space-x-16 absolute absolute-center nav-list">
+      <li class="color-shift cursor-pointer" id="home-nav-link">Home</li>
+      <li class="color-shift"><a href="#review-section">Reviews</a></li>
+      <li class="color-shift"><a href="#contact-section">Contact</a></li>
     </ul>
 
 
     <button class="nav-toggles mr-6">
-      <div class="pb-5">
+      <div class="pb-5 expand-ico hidden">
         <img src="./assets/icons/menu.svg" alt="hamburder icon" class="w-6 absolute" />
         <img src="./assets/icons/menu-light.svg" alt="hamburder icon"
           class="icon-light w-6 absolute opacity-0 color-shift" />
+      </div>
+      <div class="pb-5 collapse-ico">
+        <img src="./assets/icons/cross.svg" alt="hamburder icon" class="w-4 absolute" />
+        <img src="./assets/icons/cross-light.svg" alt="hamburder icon"
+          class="icon-light w-4 absolute opacity-0 color-shift" />
       </div>
     </button>
   </nav>
 
 
 
-  <header class="sm:px-10 -mt-6 h-[100vh] flex flex-col items-center justify-center box-border z-0">
+  <header class="sm:px-10 -mt-6 h-[100vh] flex flex-col items-center justify-center box-border z-0" id="home-section">
     <h1 class="
       tagline hero-txt inline text-4xl
       sm:text-6xl sm:w-max sm:max-w-lg">
@@ -80,7 +84,7 @@
     <h3
       class="sm:px-10 h-[100vh] flex flex-col items-center justify-center box-border text-4xl sm:text-6xl fixed top-0 absolute-center opacity-0 -z-10"
       id="transition-txt">
-      seriosly</h3>
+      seriously</h3>
 
     <button
       class="tagline btn contact-btn w-max border-myblack border-2  bg-myblack text-white px-10 py-3 mt-6 text-base sm:text-lg hover:bg-white hover:text-myblack hover:border-myblack transition">contact</button>
@@ -236,7 +240,8 @@
 
 
 
-  <section class="px-10 min-h-[100vh] flex flex-col sm:items-center justify-center box-border relative z-30">
+  <section class="px-10 min-h-[100vh] flex flex-col sm:items-center justify-center box-border relative z-30"
+    id="contact-section">
 
     <h3 class="text-4xl sm:text-5xl font-medium sm:w-max mt-32 sm:mt-0">Contact for more details</h3>
 
