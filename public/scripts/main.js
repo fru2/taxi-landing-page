@@ -1,14 +1,12 @@
 gsap.registerPlugin(ScrollTrigger);
 
 
-let navExpanded = true;
+let navExpanded = false;
 const navToggleBtn = document.querySelector('.nav-toggles');
 const navCloseBtn = document.querySelector('.collapse-ico');
 const navExpandBtn = document.querySelector('.expand-ico');
 const navList = document.querySelector('.nav-list');
 const homeNavLink = document.querySelector('#home-nav-link');
-
-
 
 
 navigationAnimation();
@@ -24,19 +22,9 @@ homeNavLink.addEventListener('click', () => {
 })
 
 function expandNav() {
-
-  if (navExpanded) {
-    navCloseBtn.className = 'pb-5 collapse-ico hidden';
-    navExpandBtn.className = 'pb-5 expand-ico';
-    navList.className = 'hidden space-x-16 absolute absolute-center nav-list';
-    navExpanded = !navExpanded;
-  } else {
-    navCloseBtn.className = 'pb-5 collapse-ico';
-    navExpandBtn.className = 'pb-5 expand-ico hidden';
-    navList.className = 'flex space-x-16 absolute absolute-center nav-list';
-    navExpanded = !navExpanded;
-  }
-
+  navCloseBtn.classList.toggle('hidden');
+  navExpandBtn.classList.toggle('hidden');
+  navList.classList.toggle('hidden');
 }
 
 
@@ -56,7 +44,8 @@ function bodyAnimation() {
 
     ScrollTrigger.config({
       // Disables the resfresh even in viewport resize
-      autoRefreshEvents: "visibilitychange, DOMContentLoaded, load"
+      autoRefreshEvents: "visibilitychange, DOMContentLoaded, load",
+      ignoreMobileResize: true
     })
 
   }

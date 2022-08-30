@@ -50,21 +50,20 @@
         class="icon-light w-8 absolute opacity-0 color-shift" />
     </div>
 
-    <!-- Navigation don't work as expected -->
-    <ul class="sm:flex hidden space-x-16 absolute absolute-center nav-list">
-      <li class="color-shift cursor-pointer" id="home-nav-link">Home</li>
-      <li class="color-shift"><a href="#review-section">Reviews</a></li>
-      <li class="color-shift"><a href="#contact-section">Contact</a></li>
+    <ul class="space-x-16 absolute absolute-center nav-list hidden">
+      <li class="cursor-pointer" id="home-nav-link">Home</li>
+      <li class=""><a href="#review-section">Reviews</a></li>
+      <li class=""><a href="#contact-section">Contact</a></li>
     </ul>
 
 
     <button class="nav-toggles mr-6">
-      <div class="pb-5 expand-ico hidden">
+      <div class="pb-5 expand-ico">
         <img src="./assets/icons/menu.svg" alt="hamburder icon" class="w-6 absolute" />
         <img src="./assets/icons/menu-light.svg" alt="hamburder icon"
           class="icon-light w-6 absolute opacity-0 color-shift" />
       </div>
-      <div class="pb-5 collapse-ico">
+      <div class="pb-5 collapse-ico hidden">
         <img src="./assets/icons/cross.svg" alt="hamburder icon" class="w-4 absolute" />
         <img src="./assets/icons/cross-light.svg" alt="hamburder icon"
           class="icon-light w-4 absolute opacity-0 color-shift" />
@@ -117,23 +116,26 @@
   </div>
 
 
-
-  <p id="scroll" class="fixed bottom-0 absolute-center my-6">keep scrolling</p>
+  <div id="scroll" class="fixed bottom-0 absolute-center my-6 flex flex-col justify-center items-center">
+    <lottie-player src="assets/lottie-icons/lf30_editor_eqnzb6gd.json" class="w-16" background="transparent" speed="1"
+      loop autoplay muted></lottie-player>
+    <p class="block">Scroll down</p>
+  </div>
 
   <section id="services-section" class="relative text-white -mx-8 sm:-mx-16 z-30 hidden">
     <article id="service-1"
-      class="px-12 sm:px-40 flex flex-col items-center justify-center box-border fixed z-30 h-screen sm:w-[65vw] top-0 opacity-0">
+      class="px-12 sm:px-40 flex flex-col items-center justify-center box-border fixed z-30 h-screen sm:w-[80vw] top-0 opacity-0">
       <h3 class="text-4xl sm:text-6xl sm:leading-tight">Planning for a long trip? We got you. Hire for as long as
         you
         need.</h3>
     </article>
     <article id="service-2"
-      class="px-12 sm:px-40 flex flex-col items-center justify-center box-border fixed z-30 h-screen sm:w-[65vw] top-0 opacity-0">
+      class="px-12 sm:px-40 flex flex-col items-center justify-center box-border fixed z-30 h-screen sm:w-[80vw] top-0 opacity-0">
       <h3 class="text-4xl sm:text-6xl sm:leading-tight">Rates that fit your budget, it's 30% more cheaper than ola and
         uber.</h3>
     </article>
     <article id="service-3"
-      class="px-12 sm:px-40 flex flex-col items-center justify-center box-border fixed z-30 h-screen sm:w-[65vw] top-0 opacity-0">
+      class="px-12 sm:px-40 flex flex-col items-center justify-center box-border fixed z-30 h-screen sm:w-[80vw] top-0 opacity-0">
       <h3 class="text-4xl sm:text-6xl sm:leading-tight">Need SUV, sedan, hatchback? You name it, we will send it.</h3>
     </article>
   </section>
@@ -149,94 +151,6 @@
       <div class="dot"></div>
       <div class="dot"></div>
     </div>
-  </section>
-
-  <section id="review-section"
-    class="sm:px-10 min-h-[100vh] mt-16 flex flex-col justify-center box-border relative z-30">
-    <h3 class="text-4xl sm:text-5xl max-w-xl">Reviews from our customers:</h3>
-
-    <div class="review-container bg-mygray px-8 py-5 sm:px-16 sm:py-6 mt-10 space-y-6">
-
-      <div>
-        <div class="flex row justify-between items-center">
-          <p class="name text-lg font-medium">Indumati</p>
-          <p class="date-time text-[#b1b3b4] mr-4">23-march-2022</p>
-        </div>
-
-        <p class="review-txt mt-3">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren, no sea
-        </p>
-
-        <div class="rating flex row mt-3">
-          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
-          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
-          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
-          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
-          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-inactive">
-        </div>
-
-        <hr class="mt-6" />
-      </div>
-
-      <div>
-        <div class="flex row justify-between items-center">
-          <p class="name text-lg font-medium">Bheem</p>
-          <p class="date-time text-[#b1b3b4] mr-4">23-march-2022</p>
-        </div>
-
-        <p class="review-txt mt-3">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren, no sea
-        </p>
-
-        <div class="rating flex row mt-3">
-          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
-          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
-          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
-          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
-          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-inactive">
-        </div>
-
-        <hr class="mt-6" />
-      </div>
-
-      <div>
-        <div class="flex row justify-between items-center">
-          <p class="name text-lg font-medium">Chutki</p>
-          <p class="date-time text-[#b1b3b4] mr-4">23-march-2022</p>
-        </div>
-
-        <p class="review-txt mt-3">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren, no sea
-        </p>
-
-        <div class="rating flex row mt-3">
-          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
-          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
-          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
-          <img src="./assets/icons/star-active.svg" alt="star icon" class="star star-active">
-          <img src="./assets/icons/star-inactive.svg" alt="star icon" class="star star-inactive">
-        </div>
-
-        <hr class="mt-6" />
-      </div>
-
-      <div class="flex row gap-6 mt-6 mb-3">
-        <button class="btn btn-outline border-2 border-myblack px-6 py-1 hover:text-white hover:bg-myblack">VIEW
-          MORE</button>
-        <button
-          class="btn contact-btn w-max border-myblack border-2  bg-myblack text-white px-6 py-1 hover:bg-mygray hover:text-myblack hover:border-myblack transition">
-          WRITE REVIEW
-        </button>
-      </div>
-
-    </div>
-
   </section>
 
 
@@ -260,11 +174,43 @@
   </section>
 
 
+  <div class="fab fixed bottom-0 right-0 z-[49] px-8 my-6 flex flex-row w-full justify-between">
+
+    <!-- Whatsapp fab button  -->
+    <button>
+      <a href="https://wa.me/+919122345877?text=I'm%20interested%20in%20booking%20a%20ride.">
+        <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+          <path
+            d="M1.9 11.7l.447.224.138-.277L2.3 11.4l-.4.3zm1.4 1.4l.3-.4-.247-.185-.277.138.224.447zM.5 14.5l-.447-.224a.5.5 0 00.67.671L.5 14.5zm4-10l-.277-.416A.5.5 0 004 4.5h.5zm6 6v.5a.5.5 0 00.416-.223L10.5 10.5zM6.254 5.026l.493-.083-.493.083zm.14.836l-.493.082.493-.082zm-.432.997l.277.416-.277-.416zm4.68 3.428l.416.277-.416-.277zm-.668-1.541l.083-.493-.083.493zm-.836-.14l-.082.493.082-.493zm-.997.432l-.416-.277.416.277zM0 7.5c0 1.688.558 3.247 1.5 4.5l.8-.6A6.47 6.47 0 011 7.5H0zM7.5 0A7.5 7.5 0 000 7.5h1A6.5 6.5 0 017.5 1V0zM15 7.5A7.5 7.5 0 007.5 0v1A6.5 6.5 0 0114 7.5h1zM7.5 15A7.5 7.5 0 0015 7.5h-1A6.5 6.5 0 017.5 14v1zM3 13.5A7.47 7.47 0 007.5 15v-1a6.469 6.469 0 01-3.9-1.3l-.6.8zM.723 14.947l2.8-1.4-.448-.894-2.8 1.4.448.894zm.729-3.47l-1.4 2.8.894.447 1.4-2.8-.894-.447zM4 4.5v1h1v-1H4zM9.5 11h1v-1h-1v1zM4 5.5A5.5 5.5 0 009.5 11v-1A4.5 4.5 0 015 5.5H4zm.777-.584l.214-.142-.555-.832-.213.142.554.832zm.984.192l.14.836.986-.164-.14-.837-.986.165zm-.076 1.335l-.962.641.554.832.962-.641-.554-.832zm.216-.499a.5.5 0 01-.216.499l.554.832a1.5 1.5 0 00.648-1.495l-.986.164zm-.91-1.17a.5.5 0 01.77.334l.986-.165a1.5 1.5 0 00-2.311-1.001l.555.832zm5.925 6.003l.142-.213-.832-.555-.142.214.832.554zm-.86-2.524l-.836-.14-.164.987.836.139.165-.986zm-2.33.508l-.642.962.832.554.641-.962-.832-.554zm1.494-.648a1.5 1.5 0 00-1.495.648l.832.554a.5.5 0 01.499-.216l.164-.986zm1.838 2.451a1.5 1.5 0 00-1.001-2.311l-.165.986a.5.5 0 01.334.77l.832.555z"
+            fill="currentColor"></path>
+        </svg>
+      </a>
+    </button>
+
+    <!-- call fab button  -->
+
+    <button>
+      <a href="tel:9122345877">
+        <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+          <path
+            d="M4.72.5H2.5a2 2 0 00-2 2v2c0 5.523 4.477 10 10 10h2a2 2 0 002-2v-1.382a1 1 0 00-.553-.894l-2.416-1.208a1 1 0 00-1.396.578l-.297.893a1.21 1.21 0 01-1.385.804A6.047 6.047 0 013.71 6.547a1.21 1.21 0 01.804-1.385l1.108-.37a1 1 0 00.654-1.19L5.69 1.257A1 1 0 004.72.5z"
+            stroke="currentColor"></path>
+        </svg>
+      </a>
+    </button>
+  </div>
+
+
+
   <footer class="flex sm:flex-row flex-col justify-between relative z-30">
     <p>© BoyTravelsAndCab.com - 2022</p>
     <p class="pt-1 sm:p-0">Designed and developed by <span><a href="https://utsav-anand.com" target="_blank"
           class="decoration-2 decoration-blue-500 underline">fru2</a></span></p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-player/1.4.3/lottie-player.js"
+    integrity="sha512-gloNJjJNXOqLPOVxOJ/Sg9VN4jSPZpDdEQC+CDP0TczZ6OaOk0Ru1daFEOT/XAJY7fYABwFWVRXOx4HMFr6+lA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
