@@ -115,3 +115,45 @@ nav ul {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+
+#eapps-google-reviews-9555bf77-4c23-40c1-8c24-48eff50ee16f>div>div>div.WidgetTitle__Container-sc-173f1y-0.eLZcUW>div>div>div {
+  opacity: 0 !important;
+  display: none !important;
+}
+
+#eapps-google-reviews-9555bf77-4c23-40c1-8c24-48eff50ee16f>div>a {
+  opacity: 0 !important;
+}
+
+
+.car-cards-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.car-card {
+  height: 18rem;
+  width: 15rem;
+  isolation: isolate;
+  position: relative;
+}
+
+.car-card>img {
+  position: absolute;
+  height: 15rem;
+  width: 15rem;
+  object-fit: cover;
+  z-index: -50;
+}
+
+.car-card>div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #f3f3f3;
+  padding: 0.5rem 0;
+}
