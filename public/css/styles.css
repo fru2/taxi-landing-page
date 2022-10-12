@@ -157,3 +157,9 @@ nav ul {
   background-color: #f3f3f3;
   padding: 0.5rem 0;
 }
+
+
+.branding {
+  filter: invert(26%) sepia(16%) saturate(177%) hue-rotate(152deg) brightness(95%) contrast(90%);
+  cursor: pointer;
+}
