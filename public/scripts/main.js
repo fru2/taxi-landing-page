@@ -7,6 +7,7 @@ const navCloseBtn = document.querySelector('.collapse-ico');
 const navExpandBtn = document.querySelector('.expand-ico');
 const navList = document.querySelector('.nav-list');
 const homeNavLink = document.querySelector('#home-nav-link');
+const brandingLogo = document.querySelector(".branding");
 
 
 navigationAnimation();
@@ -18,6 +19,10 @@ navToggleBtn.addEventListener('click', () => {
 });
 
 homeNavLink.addEventListener('click', () => {
+  moveToTop();
+})
+
+brandingLogo.addEventListener('click', () => {
   moveToTop();
 })
 
